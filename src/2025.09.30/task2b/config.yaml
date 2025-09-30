@@ -1,0 +1,21 @@
+# Input / output
+input_path: "../../../../datasets/terra_02_000004.asc"  # path to .asc/.xyz file with x y z [class]
+output_dir: "./outputs"
+
+# Filters
+bbox:
+  xmin: -360.0
+  xmax: -330.0
+  ymin: 510.0
+  ymax: 540.0
+  zmin: -150.0
+  zmax: -120.0
+height_threshold: -80.0
+distance_center: [-430.0, 383.0, -80.0]
+distance_radius: 20.0
+class_filter: -1  # set >=0 to filter by class, -1 means ignored
+
+# Visualization / misc
+viz: True
+downsample_for_viz: 10000  # points to plot at most (random sample)
+random_seed: 42

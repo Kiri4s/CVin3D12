@@ -3,3 +3,10 @@ task1b/outputs/subsampled_random_10000.xyz
 task1b/outputs/subsampled_voxel_2.000_14770.xyz
 task1b/outputs/subsampled_fps_10000.xyz
 task1b/outputs/2025-09-29
+
+# task2b
+task2b/outputs/2025-09-30
+task2b/outputs/bbox_filtered.asc
+task2b/outputs/high_points.asc
+task2b/outputs/near_center.asc
+task2b/outputs/report.txt
