@@ -16,22 +16,20 @@ from omegaconf import DictConfig
 @dataclass
 class Config:
     # I/O
-    input_path: str = (
-        "../../../../datasets/terra_02_000004.asc"  # path to .asc/.xyz/.txt file
-    )
-    output_dir: str = "./outputs"
+    input_path: str
+    output_dir: str
 
     # Subsampling options
-    method: str = "random"  # random | voxel | fps
-    n_samples: int = 10000  # for random and fps
-    voxel_size: float = 2.0  # for voxel
+    method: str
+    n_samples: int
+    voxel_size: float
 
     # Misc
-    seed: int = 42
-    visualize: bool = True
-    save_vis_to: str = "./outputs/randomviz.png"
-    save_xyz: bool = True
-    fps_init_index: int | None = None  # optional start index for FPS
+    seed: int
+    visualize: bool
+    save_vis_to: str
+    save_xyz: bool
+    fps_init_index: int | None
 
 
 def load_asc(path: str) -> np.ndarray:
@@ -171,9 +169,8 @@ def visualize_point_cloud(
     plt.savefig(save_to)
 
 
-@hydra.main(version_base=None, config_path=None)
+@hydra.main(version_base=None, config_path="./", config_name="config")
 def main(cfg: Config) -> None:
-    cfg = Config()
     logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
     log = logging.getLogger("subsample")
 

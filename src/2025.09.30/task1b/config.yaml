@@ -1,0 +1,15 @@
+# I/O
+input_path: "../../../../datasets/terra_02_000004.asc"  # path to .asc/.xyz/.txt file
+output_dir: "./outputs"
+
+# Subsampling options
+method: "random"  # random | voxel | fps
+n_samples: 10000  # for random and fps
+voxel_size: 2.0  # for voxel
+
+# Misc
+seed: 42
+visualize: True
+save_vis_to: "./outputs/randomviz.png"
+save_xyz: True
+fps_init_index: None # optional start index for FPS
