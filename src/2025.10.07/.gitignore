@@ -1,0 +1,9 @@
+task2/outputs/2025*
+task2/outputs/points_rgb.csv
+task2/outputs/points_2d_matplotlib.svg
+
+task4/outputs/2025*
+task4/outputs/*.npy
+task4/outputs/run_summary.json
+task4/outputs/task8_stats.csv
+

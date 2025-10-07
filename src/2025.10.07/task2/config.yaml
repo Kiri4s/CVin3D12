@@ -1,0 +1,22 @@
+# Генерация точек
+N: 1000
+seed: 42
+
+# Сохранение/папка результатов (относительно оригинальной cwd)
+save_dir: "./outputs"
+
+# Визуализация
+plot_matplotlib: True
+plot_plotly: True
+
+# Параметры маркеров
+matplotlib_marker_size: 10
+plotly_marker_size: 3
+
+# Сохранение файлов данных
+save_csv: True
+save_ply: False
+
+# Альтернативная цветовая схема
+use_alt_colormap: True
+alt_colormap: "viridis"

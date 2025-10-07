@@ -1,0 +1,18 @@
+# IO
+input_path: "../../../../datasets/terra_02_000004.asc"
+output_dir: "outputs"
+
+# Task parameters
+constant_value: 10.0
+multiply_factor: 2.0
+add_value: 5.0
+
+gaussian_sigma: 2.0
+moving_average_window: 5
+
+colormap: "viridis"
+
+filter_min: -1e9
+filter_max: 1e9
+
+use_scalar_axis: 2  # Z as scalar by default

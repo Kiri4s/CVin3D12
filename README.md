@@ -4,13 +4,25 @@ This repository contains scripts and reports for 3D point cloud segmentation and
 
 ## Structure
 
-- [task1](./src/2025.09.30/task1/)
+- lesson1
 
-- [task1b](./src/2025.09.30/task1b/)
+    - [task1](./src/2025.09.30/task1/)
 
-- [task2](./src/2025.09.30/task2/)
+    - [task1b](./src/2025.09.30/task1b/)
 
-- [task2b](./src/2025.09.30/task2b/)
+    - [task2](./src/2025.09.30/task2/)
+
+    - [task2b](./src/2025.09.30/task2b/)
+
+- lesson2
+
+    - [task1](./src/2025.10.07/task1/)
+
+    - [task2](./src/2025.10.07/task2/)
+
+    - [task3](./src/2025.10.07/task3/)
+
+    - [task4](./src/2025.10.07/task4/)
 
 ## Installation
 
