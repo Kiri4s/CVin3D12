@@ -12,7 +12,7 @@ moving_average_window: 5
 
 colormap: "viridis"
 
-filter_min: -1e9
-filter_max: 1e9
+filter_min: 0.5
+filter_max: 0.9
 
 use_scalar_axis: 2  # Z as scalar by default
