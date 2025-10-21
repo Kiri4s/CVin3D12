@@ -1,0 +1,23 @@
+# Входные файлы
+input_txt: "bildstein_station1_xyz_intensity_rgb.txt"
+input_label: "../../../../datasets/sem8_labels_training/bildstein_station1_xyz_intensity_rgb.labels"
+
+# Папка вывода
+output_dir: "./outputs"
+
+# Нормализация
+normalize:
+  rgb_divide_by_255: true
+  coords_method: "center_scale"   # options: center_scale, minmax, zscore
+  normalize_intensity: true
+  intensity_method: "max"         # options: max, minmax, zscore
+
+# Какие форматы сохранять
+outputs:
+  formats: [npy] # options: npy, txt, h5
+  npy_name: "semantic3d_dataset.npy"
+  txt_name: "semantic3d_dataset.txt"
+  h5_name: "semantic3d_dataset.h5"
+
+# Логирование
+log_level: INFO
