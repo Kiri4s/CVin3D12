@@ -1,2 +1,4 @@
 task1/bildstein_station1_xyz_intensity_rgb.txt
+task1/bildstein_station3_xyz_intensity_rgb.txt
 task1/outputs/2025*
+task1/outputs/semantic3d_dataset.npy
