@@ -21,3 +21,21 @@ outputs:
 
 # Логирование
 log_level: INFO
+
+# Аугментации
+rotation:
+  apply: true
+  angles: [0.01, 0.02, 0.03]   # углы в радианах
+  axes: "xyz"               # оси вращения (вращения покоординатно по порядку указанному в строке)
+  inplace: true
+
+gaussian_noise:
+  apply: true
+  std: 1.0
+  inplace: true
+
+uniform_noise:
+  apply: true
+  low: -0.5
+  high: 0.5
+  inplace: true

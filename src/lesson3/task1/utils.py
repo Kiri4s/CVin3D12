@@ -7,7 +7,7 @@ def ensure_output_dir(p: Path):
     p.mkdir(parents=True, exist_ok=True)
 
 
-def load_point_cloud(path: Path) -> np.ndarray:
+def load_point_cloud(path: Path, max_rows=None) -> np.ndarray:
     """Загружает .txt файл Семантик3D.
 
     Ожидается строка с числами, разделёнными пробелом. Возвращает numpy array
@@ -15,7 +15,7 @@ def load_point_cloud(path: Path) -> np.ndarray:
     """
 
     try:
-        arr = np.genfromtxt(path)
+        arr = np.genfromtxt(path, max_rows=None)
     except Exception as e:
         print(f"loadtxt failed with {e}")
         exit(1)
@@ -25,10 +25,10 @@ def load_point_cloud(path: Path) -> np.ndarray:
     return arr
 
 
-def load_labels(path: Path) -> np.ndarray:
+def load_labels(path: Path, max_rows=None) -> np.ndarray:
     """Загружает файл .label, где каждая строка — целое число метки."""
     try:
-        labels = np.genfromtxt(path, dtype=int)
+        labels = np.genfromtxt(path, dtype=int, max_rows=max_rows)
     except Exception as e:
         print(f"loadtxt failed with {e}")
         exit(1)

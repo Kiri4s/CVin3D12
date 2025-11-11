@@ -24,6 +24,10 @@ This repository contains scripts and reports for 3D point cloud segmentation and
 
     - [task4](./src/lesson2/task4/)
 
+- lesson3
+
+    - [task1](./src/lesson3/task1/)
+
 ## Installation
 
 1) install [uv](https://docs.astral.sh/uv/getting-started/installation/)
