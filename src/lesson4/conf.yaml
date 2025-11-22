@@ -1,0 +1,55 @@
+seed: 42
+
+data:
+  root: "../../../datasets/ModelNet10"  # Path to ModelNet dataset
+  num_classes: 10  # 10 for ModelNet10, 40 for ModelNet40
+  num_points: 1024  # Number of points to sample from each object
+  normalize: true  # Normalize point clouds to [-1, 1]
+
+model:
+  input_dim: 3
+  feature_transform: true  # Use feature transformation T-Net
+  
+  # T-Net (Transformation Network) parameters
+  tnet:
+    mlp_dims: [64, 128, 1024]
+  
+  point_mlp: [64, 128, 1024]
+
+  global_feature_dim: 1024
+  
+  classifier_dims: [512, 256]
+  dropout: 0.3
+
+training:
+  max_epochs: 100
+  batch_size: 32
+  num_workers: 4
+  device: "cpu"
+  
+  optimizer:
+    lr: 0.001
+    weight_decay: 0.0001
+  
+  scheduler:
+    name: "StepLR"
+    step_size: 20
+    gamma: 0.7
+  
+  gradient_clip_val: 1.0
+  early_stopping_patience: 15
+  
+  checkpoint_dir: "./checkpoints"
+  log_dir: "./logs"
+
+loss:
+  name: "CrossEntropyLoss"
+  label_smoothing: 0.0
+  
+  # Regularization for transformation matrices
+  feature_transform_reg_weight: 0.001
+
+evaluation:
+  visualize_samples: 10
+  save_confusion_matrix: true
+  save_predictions: true
