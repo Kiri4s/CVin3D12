@@ -1,0 +1,49 @@
+seed: 42
+
+data:
+  root: "../../../datasets/ds4segmentation"
+  num_classes: 13
+  num_points: 4096  # Number of points to sample from each object
+  val_sz: 0.1
+  test_sz: 0.1
+  normalize: true  # Normalize point clouds to [-1, 1]
+  class_weights: [0.01778017, 0.04592991, 0.03114523, 0.17678612, 0.06805447, 0.02881833, 0.13850915, 0.05053487, 0.22021148, 0.07879188, 0.01176409, 0.02469478, 0.10697954]
+
+model:
+  input_dim: 3
+  feature_transform: true  # Use feature transformation T-Net
+  dropout: 0.3
+
+training:
+  max_epochs: 60
+  batch_size: 4
+  num_workers: 0
+  device: "mps"
+  
+  optimizer:
+    lr: 0.001
+    weight_decay: 0.0001
+  
+  scheduler:
+    name: "StepLR"
+    step_size: 20
+    gamma: 0.7
+  
+  gradient_clip_val: 1.0
+  early_stopping_patience: 15
+  
+  checkpoint_dir: "./checkpoints"
+  log_dir: "./logs"
+
+loss:
+  name: "CrossEntropyLoss"
+  label_smoothing: 0.0
+  
+  # Regularization for transformation matrices
+  feature_transform_reg_weight: 0.001
+
+evaluation:
+  visualize_results: true  # Whether to generate visualization at the end of testing
+  visualize_samples: 4
+  save_confusion_matrix: true
+  save_predictions: true
