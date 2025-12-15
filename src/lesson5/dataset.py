@@ -27,6 +27,9 @@ def load_ply_file(file_path):
                 )  # default label 0 if not provided
                 verts.append([x, y, z])
                 labels.append(label)
+            elif len(values) == 3:  # x, y, z only
+                x, y, z = float(values[0]), float(values[1]), float(values[2])
+                verts.append([x, y, z])
 
         return np.array(verts), np.array(labels)
 
@@ -42,7 +45,8 @@ def sample_point_cloud(vertices, labels, num_points=1024):
         indices = np.random.choice(len(vertices), num_points, replace=False)
 
     point_cloud = vertices[indices]
-    point_labels = labels[indices]
+    if len(labels) > 0:
+        point_labels = labels[indices]
     return point_cloud, point_labels
 
 

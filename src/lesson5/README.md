@@ -10,6 +10,8 @@ This lesson implements a PointNet-based deep learning model for point cloud segm
 - **model.py** — PointNet segmentation model implementation using PyTorch Lightning
 - **dataset.py** — ModelNet segmentation dataset loader and PyTorch Lightning DataModule
 - **inspectds.py** — Script to collect dataset statistics
+- **predict.py** — Script for performing inference with trained models on PLY point cloud files
+- **visualize.py** — Script for visualizing point cloud predictions and comparing with ground truth
 - **conf.yaml** — Configuration file for segmentation training hyperparameters
 
 
@@ -58,6 +60,34 @@ Override configuration parameters from command line:
 
 ```bash
 uv run main.py training.max_epochs=100 data.num_points=2048 training.batch_size=32
+```
+
+### Prediction
+
+Perform inference on PLY files using a trained model checkpoint:
+
+```bash
+uv run predict.py --path2model=/path/to/checkpoint.ckpt --input=/path/to/input.ply
+```
+
+To process multiple files or a directory of PLY files:
+
+```bash
+uv run predict.py --path2model=/path/to/checkpoint.ckpt --input=/path/to/input/directory --savepreds2folder=/path/to/output/directory
+```
+
+### Visualization
+
+Visualize predictions from a trained model on a PLY file:
+
+```bash
+uv run visualize.py --path2model=/path/to/checkpoint.ckpt --input=/path/to/input.ply
+```
+
+To save visualization to a file:
+
+```bash
+uv run visualize.py --path2model=/path/to/checkpoint.ckpt --input=/path/to/input.ply --save2path=/path/to/output.png
 ```
 
 ### Logs monitoring
