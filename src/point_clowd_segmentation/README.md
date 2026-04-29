@@ -27,3 +27,11 @@
   <img src="./results/PointNetpp/cm_PointNetpp.png" alt="PointNet++ Confusion Matrix" style="width:33%; max-width:400px;">
   <img src="./results/PointNet/cm_PointNet.png" alt="PointNet Confusion Matrix" style="width:33%; max-width:400px;">
 </div>
+
+## Inference example:
+
+[valve_0250_lidar_classes](https://kiri4s.github.io/CVin3D12/src/point_clowd_segmentation/results/valve_0250_lidar_classes_segmentation_interactive.html)
+
+<div style="display:flex; gap:8px; align-items:center;">
+  <img src="./results/valve_0250_lidar_classes_segmentation_matplotlib.png" alt="" style="width:100%; max-width:600px;">
+</div>

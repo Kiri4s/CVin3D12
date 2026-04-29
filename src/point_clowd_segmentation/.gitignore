@@ -1,2 +1,4 @@
 **/*.pt
 outputs
+**/*.npz
+**/*.DS_Store
