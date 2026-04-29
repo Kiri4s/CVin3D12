@@ -1,0 +1,9 @@
+data_dir: /Users/kirillsemenovyh/github/CV3D/datasets/valve_dataset/
+out_dir: /Users/kirillsemenovyh/github/CV3D/CVin3D12/src/point_clowd_segmentation/results
+epochs: 30
+batch_size: 32
+num_points: 2048
+models:
+- PointNet
+- PointNet++
+- DGCNN
