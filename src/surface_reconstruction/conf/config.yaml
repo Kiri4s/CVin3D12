@@ -1,0 +1,45 @@
+dataset_dir: /Users/kirillsemenovyh/github/CV3D/datasets/valve_dataset
+visualize: false  # set true to write per-cloud HTML visualization
+output_dir: /Users/kirillsemenovyh/github/CV3D/CVin3D12/src/surface_reconstruction/outputs/reconstructed
+metrics_file: /Users/kirillsemenovyh/github/CV3D/CVin3D12/src/surface_reconstruction/outputs/metrics.json
+log_file: /Users/kirillsemenovyh/github/CV3D/CVin3D12/src/surface_reconstruction/outputs/pipeline.log
+clouds_limit: 1
+
+preprocessing:
+  statistical_outlier:
+    enabled: true
+    nb_neighbors: 20
+    std_ratio: 2.0
+  normalize:
+    enabled: true
+  voxel_downsample:
+    enabled: false
+    voxel_size: 0.5
+
+segmentation:
+  min_points: 30
+
+# PCA feature thresholds (eigenvalues sorted descending: e1 >= e2 >= e3)
+# linearity  = (e1 - e2) / e1
+# planarity  = (e2 - e3) / e1
+# sphericity = e3 / e1
+classification:
+  planarity_threshold: 0.5
+  linearity_threshold: 0.6
+  sphericity_threshold: 0.3
+
+reconstruction:
+  method_map:
+    planar: alpha_shapes
+    tubular: ball_pivoting
+    spherical: poisson
+    complex: poisson
+  poisson:
+    depth: 8
+    width: 0
+    scale: 1.1
+    linear_fit: false
+  alpha_shapes:
+    alpha: 0.5  # normalized-space alpha; auto-derived from density when <= 0
+  ball_pivoting:
+    radii_multipliers: [1.0, 2.0, 4.0]  # multiplied by mean NN distance

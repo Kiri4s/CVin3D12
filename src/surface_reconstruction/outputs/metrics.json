@@ -1,0 +1,103 @@
+[
+  {
+    "name": "valve_0001_lidar_classes",
+    "segments": [
+      {
+        "n_vertices": 959,
+        "n_triangles": 1806,
+        "point_to_mesh_mean": 0.0,
+        "point_to_mesh_max": 0.0,
+        "point_to_mesh_rms": 0.0,
+        "triangle_normal_std": 0.49925109444943294,
+        "label": 0,
+        "geo_type": "tubular",
+        "method": "ball_pivoting"
+      },
+      {
+        "n_vertices": 71,
+        "n_triangles": 82,
+        "point_to_mesh_mean": 0.0010867880191653967,
+        "point_to_mesh_max": 0.026461906731128693,
+        "point_to_mesh_rms": 0.004589973017573357,
+        "triangle_normal_std": 0.5768778487497631,
+        "label": 1,
+        "geo_type": "tubular",
+        "method": "ball_pivoting"
+      },
+      {
+        "n_vertices": 8528,
+        "n_triangles": 16804,
+        "point_to_mesh_mean": 0.005273868795484304,
+        "point_to_mesh_max": 0.05361861363053322,
+        "point_to_mesh_rms": 0.00884324312210083,
+        "triangle_normal_std": 0.5772363409112262,
+        "label": 2,
+        "geo_type": "spherical",
+        "method": "poisson"
+      },
+      {
+        "n_vertices": 7457,
+        "n_triangles": 14756,
+        "point_to_mesh_mean": 0.00047689833445474505,
+        "point_to_mesh_max": 0.013290132395923138,
+        "point_to_mesh_rms": 0.0008557620458304882,
+        "triangle_normal_std": 0.5749370799628533,
+        "label": 4,
+        "geo_type": "spherical",
+        "method": "poisson"
+      },
+      {
+        "n_vertices": 430,
+        "n_triangles": 616,
+        "point_to_mesh_mean": 0.0005616826238110662,
+        "point_to_mesh_max": 0.029588358476758003,
+        "point_to_mesh_rms": 0.002961650723591447,
+        "triangle_normal_std": 0.502899458527817,
+        "label": 5,
+        "geo_type": "tubular",
+        "method": "ball_pivoting"
+      },
+      {
+        "n_vertices": 7464,
+        "n_triangles": 14756,
+        "point_to_mesh_mean": 0.0035004836972802877,
+        "point_to_mesh_max": 0.04050595685839653,
+        "point_to_mesh_rms": 0.0052006421610713005,
+        "triangle_normal_std": 0.5658702229673408,
+        "label": 6,
+        "geo_type": "complex",
+        "method": "poisson"
+      },
+      {
+        "n_vertices": 3846,
+        "n_triangles": 7446,
+        "point_to_mesh_mean": 0.0020854445174336433,
+        "point_to_mesh_max": 0.021016065031290054,
+        "point_to_mesh_rms": 0.0040665362030267715,
+        "triangle_normal_std": 0.5676569986388973,
+        "label": 7,
+        "geo_type": "complex",
+        "method": "poisson"
+      },
+      {
+        "n_vertices": 5687,
+        "n_triangles": 11096,
+        "point_to_mesh_mean": 0.00549472589045763,
+        "point_to_mesh_max": 0.04270137846469879,
+        "point_to_mesh_rms": 0.007947069592773914,
+        "triangle_normal_std": 0.5499656852475965,
+        "label": 8,
+        "geo_type": "complex",
+        "method": "poisson"
+      }
+    ],
+    "combined": {
+      "n_vertices": 34441,
+      "n_triangles": 67360,
+      "point_to_mesh_mean": 0.0028295456431806087,
+      "point_to_mesh_max": 0.05000162124633789,
+      "point_to_mesh_rms": 0.005779493134468794,
+      "triangle_normal_std": 0.5759455861572954
+    }
+  }
+]
