@@ -1,0 +1,45 @@
+defaults:
+  - _self_
+
+data:
+  root: /Users/kirillsemenovyh/github/CV3D/datasets/ds4semclf
+  num_points: 2048
+  samples_per_cloud: 16
+  train_scenes:
+    - boliler
+    - control
+    - electrical
+    - laboratory
+    - maintenance
+    - office
+  test_scenes:
+    - refinery
+    - storage
+
+model:
+  # switch to dgcnn: override _target_ and add k, emb_dims
+  _target_: models.pointnet.PointNetSeg
+  in_channels: 6
+  num_classes: 19
+  dropout: 0.5
+
+train:
+  epochs: 10
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 1.0e-4
+  scheduler: cosine   # cosine | step
+  class_weights: null  # list of 19 floats, or null
+  device: mps
+  num_workers: 4
+
+seed: 42
+
+checkpoint: null  # path to .pt file, used by visualize.py
+
+viz:
+  backend: matplotlib   # matplotlib | open3d
+  interactive: false
+  sample_idx: 0
+  save_ply: true
+  save_html: true
